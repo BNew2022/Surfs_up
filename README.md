@@ -13,7 +13,7 @@ There are 3 key differences in the weather data between June and December:
 
 ## Summary:
 
-Based on the data provided, we can summarize that the shop is more likely to be busier during the month of June as the warmer weather is more conducive to ice cream and surf board sales.  It would be a good idea to perform additional analysis on precipitation data to give us a better overall weather picture for each month.  We could add the following to our code to pull the precipitation data for each month:
+Based on the data provided, we can summarize that the shop is more likely to be busier during the month of June as the warmer weather is more conducive to ice cream and surf board sales.  It would be a good idea to perform additional analysis on precipitation data to give us a better overall weather picture for each month.  We could add the following queries to our code to pull the precipitation data for each month:
 
 june_prcp = dt.date(2017, 6, 30) - dt.timedelta(days=29)
 results = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= june_prcp).filter(Measurement.date <= dt.date(2017,6,30)).all()
